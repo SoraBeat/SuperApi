@@ -16,13 +16,13 @@ const Home = () => {
 
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const token = localStorage.getItem("token");
-    if (!token) {
-      localStorage.clear();
-      navigate("/");
-    }
-  }, []);
+  // useEffect(() => {
+  //   const token = localStorage.getItem("token");
+  //   if (!token) {
+  //     localStorage.clear();
+  //     navigate("/");
+  //   }
+  // }, []);
 
   return (
 
