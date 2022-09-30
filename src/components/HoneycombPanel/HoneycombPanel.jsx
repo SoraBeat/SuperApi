@@ -1,4 +1,4 @@
-import React, { useContext, useState,useRef } from "react";
+import React, { useContext, useState } from "react";
 
 import { apiContext } from "../../views/Home/Home";
 import swal from "sweetalert";
@@ -63,7 +63,7 @@ const HoneycombPanel = () => {
         )}
         <div className="container-8col">
           {!isLoading &&
-            apiCharacters.map((item,index) => {
+            apiCharacters.map((item, index) => {
               return (
                 <IndividualPanel
                   index={index}

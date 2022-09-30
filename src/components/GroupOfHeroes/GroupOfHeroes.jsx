@@ -38,9 +38,11 @@ const GroupOfHeroes = () => {
           case "combat":
             acumulativeStats[0][5] += parseInt(hero.powerstats[powestat])||0;
             break;
+          default:
+            break;
         }
       }
-    });
+  });
     acumulativeStats[0].map((stat,index)=>{
       if(stat>statMax){
         statMax=stat;
