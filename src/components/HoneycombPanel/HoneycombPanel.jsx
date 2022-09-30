@@ -62,7 +62,7 @@ const HoneycombPanel = () => {
           </div>
         )}
         <div className="container-8col">
-          {!isLoading &&
+          {!isLoading &&apiCharacters &&
             apiCharacters.map((item, index) => {
               return (
                 <IndividualPanel
