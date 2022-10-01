@@ -29,9 +29,20 @@ const FormLogin = () => {
       const password = formData.password;
       
       try{
-        const response = await loginApi(email, password)
-        localStorage.setItem("token",response.data.token)
-        navigate("/home");
+        // const response = await loginApi(email, password)
+        // localStorage.setItem("token",response.data.token)
+        // navigate("/home");
+        if(email==="challenge@alkemy.org"&&password==="react"){
+          localStorage.setItem("token","123")
+          navigate("/home");
+        }else{
+          swal({
+            title: "Oh no :C",
+            text: "Invalid credentials, try again",
+            icon: "error",
+            button: "Aww yiss!",
+          });
+        }
       } catch(error) {
         swal({
           title: "Oh no :C",
